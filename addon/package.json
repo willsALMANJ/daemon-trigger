@@ -1,0 +1,40 @@
+{
+  "title": "Daemon Trigger",
+  "name": "daemontrigger",
+  "id": "daemontrigger@jetpack",
+  "version": "0.0.1",
+  "description": "Trigger a shell command when visiting specific URL's",
+  "main": "index.js",
+  "author": "Will Shanks",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "GPLv3",
+  "unpack": true,
+  "preferences": [{
+	  "name": "triggers",
+	  "title": "Trigger properties",
+	  "description": "JSON object with property 'array' containing array of objects that must contain: url_regex, cmd, timeout, success_regex",
+	  "type": "string",
+	  "value": "{\"array\": []}"
+  },{
+  	"name": "bashPath",
+	"title": "Path to bash",
+	"description": "Path on system to bash (typically /usr/bin/bash)",
+	"type": "string",
+	"value": "/usr/bin/bash"
+  },{
+  	"name": "timeout",
+	"title": "Timeout",
+	"description": "Default timeout in seconds to use for trigger commands",
+	"type": "integer",
+	"value": 60
+  },{
+  	"name": "environment",
+	"title": "Environment",
+	"description": "Environment variables to set in the script that launches commands (specified in JSON format).",
+	"type": "string",
+	"value": "{}"
+  }]
+}
