@@ -65,7 +65,7 @@ page request any way.
 
 * Here is an example entry for the `triggers` preferences:
 
-	"{"array": [{"cmd": "python3 -u -m http.server", "url_regex": "^https?://localhost:8000", "success_regex": "Serving HTTP"}]}"
+    "{"array": [{"cmd": "python3 -u -m http.server", "url_regex": "^https?://localhost:8000", "success_regex": "Serving HTTP"}]}"
 
 This example uses the `http.server` module of Python 3 to serve files from the
 add-on's directory (the working directory when `cmd` is executed). It is
